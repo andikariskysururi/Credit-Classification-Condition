@@ -13,6 +13,7 @@ preprocessing_bisnis = joblib.load("C:\DeployIntern\Preprocessing_bisnis_pipelin
 model_bisnis = joblib.load("C:\DeployIntern\model_bisnis.pkl")
 
 
+
 def personal():
     col1, col2, col3 = st.columns(3)
 
@@ -308,7 +309,7 @@ def bisnis():
             result = result_dict[result[0]]
             st.success(f"Status kamu {result} untuk mendapatkan peminjaman kredit")
 
-
+st.image(r"C:\DeployIntern\1519921584364 (1).jpeg")
 st.title("CONDITIONAL CREDIT ACCEPTENCE")
 type_pred = st.selectbox('Credit Purpose', options=['Personal', 'Bisnis'], index = None)
 if type_pred == 'Personal':
