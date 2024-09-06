@@ -8,51 +8,57 @@ import pandas as pd
 st.markdown(
     """
     <style>
-    /* Mengatur warna latar belakang utama dan teks aplikasi */
+    /* Mengatur latar belakang aplikasi menjadi putih */
     .stApp {
-        background-color:  #FFFFFF; /* secondaryBackgroundColor */
-        color: #000000; /* textColor */
+        background-color: #ffffff; /* White background color */
     }
 
-    /* Mengatur warna teks judul dan label */
-    .stApp h1, .stApp h2, .stApp h3, .stApp h4, .stApp h5, .stApp h6,
-    .stApp label {
-        color: #000000; /* textColor */
+    /* Mengatur warna latar belakang untuk selectbox */
+    .stSelectbox select {
+        background-color: #f5f5f5; /* Whitesmoke background color */
+        color: #000000; /* Text color */
+        border: 1px solid #ccc; /* Border color */
+        padding: 5px; /* Padding for better appearance */
     }
 
     /* Mengatur warna teks untuk widget */
-    .stTextInput input, .stSelectbox select, .stCheckbox input, .stButton button {
-        color: #000000; /* textColor */
+    .stTextInput input, .stCheckbox input, .stButton button {
+        color: #000000; /* Text color */
     }
 
     /* Mengatur warna latar belakang untuk widget */
-    .stTextInput input, .stSelectbox select, .stCheckbox input, .stButton button {
-        background-color: #e4e4e4; /* Contoh warna latar belakang widget */
+    .stTextInput input, .stCheckbox input, .stButton button {
+        background-color: #ffffff; /* White background for input and buttons */
     }
 
     /* Mengatur warna untuk pesan success, warning, dan error */
     .stAlert {
-        color: #000000; /* textColor */
+        color: #000000 !important; /* Text color */
     }
 
-    .stAlert.stSuccess {
-        background-color: #d4edda; /* Success background color */
-        color: #155724; /* Success text color */
+    .stAlert > div {
+        color: #000000 !important; /* Text color in alerts */
     }
 
     .stAlert.stWarning {
-        background-color: #fff3cd; /* Warning background color */
-        color: #856404; /* Warning text color */
+        background-color: #fff3cd !important; /* Warning background color */
+        color: #856404 !important; /* Warning text color */
+    }
+
+    .stAlert.stSuccess {
+        background-color: #d4edda !important; /* Success background color */
+        color: #155724 !important; /* Success text color */
     }
 
     .stAlert.stError {
-        background-color: #f8d7da; /* Error background color */
-        color: #721c24; /* Error text color */
+        background-color: #f8d7da !important; /* Error background color */
+        color: #721c24 !important; /* Error text color */
     }
     </style>
     """,
     unsafe_allow_html=True
 )
+
 label_encoder_personal = joblib.load(r"LabelEncoder_personal1.pkl")
 preprocessing_personal = joblib.load(r"preprocessing_personal_pipeline1.pkl")
 model_personal = joblib.load(r"model_personal1.pkl")
