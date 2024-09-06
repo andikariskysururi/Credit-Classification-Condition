@@ -8,19 +8,20 @@ import pandas as pd
 st.markdown(
     """
     <style>
-    /* Mengatur warna latar belakang utama */
+    /* Mengatur warna latar belakang utama dan teks aplikasi */
     .stApp {
-        background-color: #FFFFFF; /* secondaryBackgroundColor */
+        background-color: #cccce4; /* secondaryBackgroundColor */
         color: #000000; /* textColor */
     }
 
-    /* Mengatur warna teks di seluruh aplikasi */
-    .stApp h1, .stApp h2, .stApp h3, .stApp h4, .stApp h5, .stApp h6 {
+    /* Mengatur warna teks judul dan label */
+    .stApp h1, .stApp h2, .stApp h3, .stApp h4, .stApp h5, .stApp h6,
+    .stApp label {
         color: #000000; /* textColor */
     }
 
     /* Mengatur warna teks untuk widget */
-    .stTextInput, .stSelectbox, .stCheckbox, .stButton {
+    .stTextInput input, .stSelectbox select, .stCheckbox input, .stButton button {
         color: #000000; /* textColor */
     }
 
@@ -28,11 +29,30 @@ st.markdown(
     .stTextInput input, .stSelectbox select, .stCheckbox input, .stButton button {
         background-color: #e4e4e4; /* Contoh warna latar belakang widget */
     }
+
+    /* Mengatur warna untuk pesan success, warning, dan error */
+    .stAlert {
+        color: #000000; /* textColor */
+    }
+
+    .stAlert.stSuccess {
+        background-color: #d4edda; /* Success background color */
+        color: #155724; /* Success text color */
+    }
+
+    .stAlert.stWarning {
+        background-color: #fff3cd; /* Warning background color */
+        color: #856404; /* Warning text color */
+    }
+
+    .stAlert.stError {
+        background-color: #f8d7da; /* Error background color */
+        color: #721c24; /* Error text color */
+    }
     </style>
     """,
     unsafe_allow_html=True
 )
-
 label_encoder_personal = joblib.load(r"LabelEncoder_personal1.pkl")
 preprocessing_personal = joblib.load(r"preprocessing_personal_pipeline1.pkl")
 model_personal = joblib.load(r"model_personal1.pkl")
