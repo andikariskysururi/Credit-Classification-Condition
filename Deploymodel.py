@@ -5,59 +5,6 @@ from sklearn.preprocessing import LabelEncoder
 import pandas as pd 
 
 
-st.markdown(
-    """
-    <style>
-    /* Mengatur latar belakang aplikasi menjadi putih */
-    .stApp {
-        background-color: #ffffff; /* White background color */
-    }
-
-    /* Mengatur warna latar belakang untuk selectbox */
-    .stSelectbox select {
-        background-color: #f5f5f5; /* Whitesmoke background color */
-        color: #000000; /* Text color */
-        border: 1px solid #ccc; /* Border color */
-        padding: 5px; /* Padding for better appearance */
-    }
-
-    /* Mengatur warna teks untuk widget */
-    .stTextInput input, .stCheckbox input, .stButton button {
-        color: #000000; /* Text color */
-    }
-
-    /* Mengatur warna latar belakang untuk widget */
-    .stTextInput input, .stCheckbox input, .stButton button {
-        background-color: #ffffff; /* White background for input and buttons */
-    }
-
-    /* Mengatur warna untuk pesan success, warning, dan error */
-    .stAlert {
-        color: #000000 !important; /* Text color */
-    }
-
-    .stAlert > div {
-        color: #000000 !important; /* Text color in alerts */
-    }
-
-    .stAlert.stWarning {
-        background-color: #fff3cd !important; /* Warning background color */
-        color: #856404 !important; /* Warning text color */
-    }
-
-    .stAlert.stSuccess {
-        background-color: #d4edda !important; /* Success background color */
-        color: #155724 !important; /* Success text color */
-    }
-
-    .stAlert.stError {
-        background-color: #f8d7da !important; /* Error background color */
-        color: #721c24 !important; /* Error text color */
-    }
-    </style>
-    """,
-    unsafe_allow_html=True
-)
 
 label_encoder_personal = joblib.load(r"LabelEncoder_personal1.pkl")
 preprocessing_personal = joblib.load(r"preprocessing_personal_pipeline1.pkl")
@@ -364,7 +311,7 @@ def bisnis():
             result = result_dict[result[0]]
             st.success(f"Status kamu {result} untuk mendapatkan peminjaman kredit")
 
-st.image(r"1519921584364 (1).jpeg")
+
 st.title("CONDITIONAL CREDIT ACCEPTENCE")
 type_pred = st.selectbox('Credit Purpose', options=['Personal', 'Bisnis'], index = None)
 if type_pred == 'Personal':
