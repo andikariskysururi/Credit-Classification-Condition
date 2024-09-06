@@ -4,13 +4,13 @@ import numpy as np
 from sklearn.preprocessing import LabelEncoder
 import pandas as pd 
 
-label_encoder_personal = joblib.load("C:\DeployIntern\LabelEncoder_personal1.pkl")
-preprocessing_personal = joblib.load("C:\DeployIntern\preprocessing_personal_pipeline1.pkl")
-model_personal = joblib.load("C:\DeployIntern\model_personal1.pkl")
+label_encoder_personal = joblib.load(r"LabelEncoder_personal1.pkl")
+preprocessing_personal = joblib.load(r"preprocessing_personal_pipeline1.pkl")
+model_personal = joblib.load(r"model_personal1.pkl")
+label_encoder_bisnis = joblib.load(r"label_encoder_bisnis.pkl")
+preprocessing_bisnis = joblib.load(r"Preprocessing_bisnis_pipeline.pkl")
+model_bisnis = joblib.load(r"model_bisnis.pkl")
 
-label_encoder_bisnis = joblib.load("C:\DeployIntern\label_encoder_bisnis.pkl")
-preprocessing_bisnis = joblib.load("C:\DeployIntern\Preprocessing_bisnis_pipeline.pkl")
-model_bisnis = joblib.load("C:\DeployIntern\model_bisnis.pkl")
 
 
 
