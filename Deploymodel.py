@@ -309,7 +309,7 @@ def bisnis():
             result = result_dict[result[0]]
             st.success(f"Status kamu {result} untuk mendapatkan peminjaman kredit")
 
-st.image(r"C:\DeployIntern\1519921584364 (1).jpeg")
+st.image(r"1519921584364 (1).jpeg")
 st.title("CONDITIONAL CREDIT ACCEPTENCE")
 type_pred = st.selectbox('Credit Purpose', options=['Personal', 'Bisnis'], index = None)
 if type_pred == 'Personal':
