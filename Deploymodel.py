@@ -5,19 +5,33 @@ from sklearn.preprocessing import LabelEncoder
 import pandas as pd 
 
 
-
-
 st.markdown(
     """
     <style>
+    /* Mengatur warna latar belakang utama */
     .stApp {
-        background-color: #FFFFFF;
+        background-color: #cccce4; /* secondaryBackgroundColor */
+        color: #000000; /* textColor */
+    }
+
+    /* Mengatur warna teks di seluruh aplikasi */
+    .stApp h1, .stApp h2, .stApp h3, .stApp h4, .stApp h5, .stApp h6 {
+        color: #000000; /* textColor */
+    }
+
+    /* Mengatur warna teks untuk widget */
+    .stTextInput, .stSelectbox, .stCheckbox, .stButton {
+        color: #000000; /* textColor */
+    }
+
+    /* Mengatur warna latar belakang untuk widget */
+    .stTextInput input, .stSelectbox select, .stCheckbox input, .stButton button {
+        background-color: #e4e4e4; /* Contoh warna latar belakang widget */
     }
     </style>
     """,
     unsafe_allow_html=True
 )
-
 
 label_encoder_personal = joblib.load(r"LabelEncoder_personal1.pkl")
 preprocessing_personal = joblib.load(r"preprocessing_personal_pipeline1.pkl")
