@@ -4,6 +4,21 @@ import numpy as np
 from sklearn.preprocessing import LabelEncoder
 import pandas as pd 
 
+
+
+
+st.markdown(
+    """
+    <style>
+    .stApp {
+        background-color: #FFFFFF;
+    }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
+
+
 label_encoder_personal = joblib.load(r"LabelEncoder_personal1.pkl")
 preprocessing_personal = joblib.load(r"preprocessing_personal_pipeline1.pkl")
 model_personal = joblib.load(r"model_personal1.pkl")
