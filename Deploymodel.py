@@ -10,7 +10,7 @@ st.markdown(
     <style>
     /* Mengatur warna latar belakang utama dan teks aplikasi */
     .stApp {
-        background-color: #cccce4; /* secondaryBackgroundColor */
+        background-color:  #FFFFFF; /* secondaryBackgroundColor */
         color: #000000; /* textColor */
     }
 
